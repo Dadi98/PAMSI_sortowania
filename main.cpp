@@ -12,11 +12,13 @@ using namespace std;
 
 
 int main() {
+
     unsigned long n = 10000000;
     float proc = 0.1;
     unsigned long *tab, *tab2, *pom;
     unsigned long czas1 = 0, czas2 = 0, czas3 = 0, czas4 = 0;
     unsigned long s;
+
 
     tab = new unsigned long[n];
     tab2 = new unsigned long[n];
