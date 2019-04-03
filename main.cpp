@@ -14,7 +14,7 @@ using namespace std;
 int main() {
 
     unsigned long n = 10000;
-    float proc[] = {0.5,0.75,0.95,0.99,0.997};
+    float proc[] = {0.25,0.5,0.75,0.95,0.99,0.997};
     unsigned long *tab, *tab2, *pom;
     unsigned long czas1 = 0, czas2 = 0, czas3 = 0, czas4 = 0;
     unsigned long s;
@@ -23,7 +23,7 @@ int main() {
     tab = new unsigned long[n];
     tab2 = new unsigned long[n];
     pom = new unsigned long[n];
-//for( t=0;t<5;t++) {
+//for( t=0;t<6;t++) {
     for (s = 0; s < 100; s++) {
         DWORD start1 = GetTickCount();
         //--------------------------//
