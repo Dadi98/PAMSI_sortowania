@@ -5,9 +5,11 @@
 #ifndef UNTITLED2_INTROSORT_H
 #define UNTITLED2_INTROSORT_H
 
-int szukaj_mediany (int *tab, int rozmiar, int i);
-
-void IS(unsigned long tab[], long left, long right);
-
+int Partition (unsigned long* , long , long );
+void QuicksortRekursywny(unsigned long* , long , long);
+void MaxKopiec(unsigned long* , long , long );
+void Kopcowanie(unsigned long* , long );
+void Wstawianie(unsigned long* , long );
+void Introspektywne(unsigned long* , long );
 
 #endif //UNTITLED2_INTROSORT_H

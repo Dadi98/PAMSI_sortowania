@@ -1,6 +1,6 @@
-#include <algorithm>
 #include "kopiec.h"
-
+#include <iostream>
+using namespace std;
 void szukaj_wiekszego_i_zamien (unsigned long *tab, long rozmiar, long i)
 {
     long najwiekszy;
@@ -12,7 +12,7 @@ void szukaj_wiekszego_i_zamien (unsigned long *tab, long rozmiar, long i)
         najwiekszy=P;
     if (najwiekszy!=i)
     {
-        std::swap(tab[najwiekszy], tab[i]);
+        swap(tab[najwiekszy], tab[i]);
         szukaj_wiekszego_i_zamien(tab,rozmiar,najwiekszy);
     }
 }
@@ -22,7 +22,7 @@ void budKopiec(unsigned long *tab, long rozmiar)
         szukaj_wiekszego_i_zamien(tab,rozmiar, i);
 }
 
-void sortkopiec(unsigned long *tab, long rozmiar)
+void SK(unsigned long *tab, long rozmiar)
 {
     unsigned long temp;
     budKopiec(tab, rozmiar);

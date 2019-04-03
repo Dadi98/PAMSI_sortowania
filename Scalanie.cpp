@@ -6,19 +6,19 @@
 using namespace std;
 
 
-void scalanie(unsigned long tab[],long L,long S, long P,unsigned long *pom)
+void scalanie(unsigned long tab[],long left,long S, long right,unsigned long *pom)
 {
-    long i = L, j = S + 1;
+    long i = left, j = S + 1;
 
 
 
-    for(long i = L;i<=P; i++)
+    for(long i = left;i<=right; i++)
         pom[i] = tab[i];
 
 
-    for(long w=L;w<=P;w++)
+    for(long w=left;w<=right;w++)
         if(i<=S)
-            if(j <= P)
+            if(j <= right)
                 if(pom[j]<pom[i])
                     tab[w] = pom[j++];
                 else
@@ -31,18 +31,18 @@ void scalanie(unsigned long tab[],long L,long S, long P,unsigned long *pom)
 
 }
 
-void SPS(unsigned long *tab, long L, long P, unsigned long  *pom)
+void SPS(unsigned long *tab, long left, long right, unsigned long  *pom)
 {
 
-    if(P<=L) return;
+    if(right<=left) return;
 
 
-    long S = (P+L)/2;
+    long S = (right+left)/2;
 
 
-    SPS(tab, L, S, pom);
-    SPS(tab, S + 1, P, pom);
+    SPS(tab, left, S, pom);
+    SPS(tab, S + 1, right, pom);
 
 
-    scalanie(tab, L, S, P, pom);
+    scalanie(tab, left, S, right, pom);
 }
