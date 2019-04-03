@@ -6,7 +6,7 @@
 #include "Scalanie.h"
 #include "tab.h"
 #include "kopiec.h"
-#include "introsort.h"
+
 
 using namespace std;
 
